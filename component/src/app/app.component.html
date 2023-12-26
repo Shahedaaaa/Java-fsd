@@ -1,0 +1,28 @@
+<!--component-->
+<h1>Component page</h1>
+<app-first></app-first>
+<!--property binding-->
+sid<input type="text" [hidden]="ishidden">
+<button [disabled]="isdisabled">submit</button>
+<!--class and style bindings-->
+<h2 [class]="isactive?'active':'inactive'">class binding-- </h2>
+<h3 [style]="active"> Style binding-- </h3>
+<!--Event binding-->
+<button (click)="incr()">increment</button>
+<button (click)="decr()">decrement</button>
+<h4>{{count}}</h4>
+<!--Two-way binding-->
+Enter a name :<input type="text" name="name" [(ngModel)]="tname"><br>
+the entered name is {{tname}}<br><br>
+<!--Directives-->
+<h1 *ngIf="show;then success;else fail"></h1>
+<ng-template #success>Student works!!</ng-template>
+<ng-template #fail>Name<input type="text"></ng-template>
+<!--pipes-->
+<h1>{{person|test:wish}}</h1>
+<!--Routing-->
+<router-outlet></router-outlet>
+
+
+
+
